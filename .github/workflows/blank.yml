@@ -45,6 +45,7 @@ jobs:
       - name: Build the application
         run: |
           mv cibyl-bin-linux32-21/mips-cibyl-elf/bin/python cibyl-bin-linux32-21/mips-cibyl-elf/bin/python.old
+          mkdir cibyl-bin-linux32-21/mips-cibyl-elf/bin/python
           2to3 --output-dir=cibyl-bin-linux32-21/mips-cibyl-elf/bin/python.old -W -n cibyl-bin-linux32-21/mips-cibyl-elf/bin/python
           cd cibyl-bin-linux32-21/examples/host-java/hello-world
           pwd
