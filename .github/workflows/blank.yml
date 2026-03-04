@@ -43,12 +43,12 @@ jobs:
           
       - name: Build the application
         run: |
-          pwd
-          dir
           cd cibyl-bin-linux32-21/mips-cibyl-elf/bin
           cp /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/host-java/hello-world/main.c main.c
           cp /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/host-java/hello-world/Makefile Makefile
           cp /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/host-java/hello-world/manifest.txt manifest.txt
+          pwd
+          dir
           make
           dir
 
