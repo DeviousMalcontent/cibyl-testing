@@ -37,4 +37,5 @@ jobs:
       - name: Build the application
         run: |
           cd /home/runner/work/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/
-          ./mips-cibyl-elf-gcc
+          dir
+          file /home/runner/work/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc
