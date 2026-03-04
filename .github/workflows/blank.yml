@@ -37,5 +37,4 @@ jobs:
       - name: Build the application
         run: |
           pwd
-          cd /home/runner/work/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/
           dir
