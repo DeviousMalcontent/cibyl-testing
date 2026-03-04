@@ -30,8 +30,10 @@ jobs:
       - name: Install dependencies
         run: |
           sudo dpkg --add-architecture i386
-          sudo apt-get update
-          sudo apt install zlib1g-dev
+          sudo apt update
+          sudo apt install zlib1g:i386
+          sudo apt install libsnappy-dev:i386
+          sudo apt install liblz4-1:i386
           wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cibyl/cibyl-bin-linux32-21.tar.gz
           tar -zxvf cibyl-bin-linux32-21.tar.gz
           export PATH=$PATH:/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin
