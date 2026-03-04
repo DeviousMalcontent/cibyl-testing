@@ -38,5 +38,5 @@ jobs:
         run: |
           pwd
           dir
-          cd cibyl-bin-linux32-21/mips-cibyl-elf
+          cd cibyl-bin-linux32-21/mips-cibyl-elf/bin
           dir
