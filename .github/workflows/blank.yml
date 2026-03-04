@@ -32,6 +32,8 @@ jobs:
           wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cibyl/cibyl-bin-linux32-21.tar.gz
           tar -zxvf cibyl-bin-linux32-21.tar.gz
           export PATH=$PATH:/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/
+          cd /home/runner/work/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/
+          ./mips-cibyl-elf-gcc
           cd /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/j2me/hello-world/
           make
           dir
