@@ -31,7 +31,7 @@ jobs:
         run: |
           wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cibyl/cibyl-bin-linux32-21.tar.gz
           tar -zxvf cibyl-bin-linux32-21.tar.gz
-          export PATH=$PATH:/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/
+          export PATH=$PATH:/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin
           echo done.
           
       - name: Build the application
@@ -39,5 +39,6 @@ jobs:
           pwd
           dir
           cd cibyl-bin-linux32-21/examples/host-java/hello-world/
+          pwd
           dir
-          ./home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc.real --help
+          ./mips-cibyl-elf-gcc.real --help
