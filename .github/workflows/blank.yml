@@ -46,7 +46,7 @@ jobs:
           cd cibyl-bin-linux32-21/examples/host-java/hello-world
           pwd
           dir
-          sed -i '6s/.*#	/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc --help#' Makefile
+          sed -i '6s#.*#	/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc --help#' Makefile
           cat Makefile
           make
 
