@@ -30,7 +30,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt install open-vm-tools
-          cd /lib/vmware-tools/lib32/
+          cd /lib/vmware-tools/
           dir
           ls
           cd /home/runner/work/cibyl-testing/
