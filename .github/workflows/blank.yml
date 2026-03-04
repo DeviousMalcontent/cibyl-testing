@@ -44,5 +44,6 @@ jobs:
           pwd
           dir
           cd cibyl-bin-linux32-21/examples/host-java/hello-world
+          pwd
           make
           dir
