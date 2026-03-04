@@ -46,6 +46,9 @@ jobs:
       - name: Build the application
         run: |
           2to3 --output-dir=cibyl-bin-linux32-21/mips-cibyl-elf/bin/python -W -n cibyl-bin-linux32-21/mips-cibyl-elf/bin/python
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/CompiledHelpers/helpers.py
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
           cd cibyl-bin-linux32-21/examples/host-java/hello-world
           pwd
           dir
