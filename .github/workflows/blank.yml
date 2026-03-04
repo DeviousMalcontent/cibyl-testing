@@ -18,8 +18,8 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
-    container:
-      image: i386/ubuntu:latest
+#    container:
+#      image: i386/ubuntu:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -29,6 +29,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          sudo apt-get install zlib1g:i386
           echo.
           pwd
           wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cibyl/cibyl-bin-linux32-21.tar.gz
