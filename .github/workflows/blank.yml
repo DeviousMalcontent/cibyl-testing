@@ -47,6 +47,7 @@ jobs:
           pwd
           dir
           sed -i '6s#.*#	/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc -Os -o $@ $<#' Makefile
+          sed -i '9s#.*#	/home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java -O -d tmpclasses -DNOJ2ME program#' Makefile
           cat Makefile
           make
 
