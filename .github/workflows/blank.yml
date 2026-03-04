@@ -40,4 +40,4 @@ jobs:
           dir
           cd cibyl-bin-linux32-21/examples/host-java/hello-world/
           dir
-          ./mips-cibyl-elf-gcc.real --help
+          ../../../bin/mips-cibyl-elf-gcc.real --help
