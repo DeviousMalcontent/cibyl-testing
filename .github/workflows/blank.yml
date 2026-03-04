@@ -1,3 +1,4 @@
+# Progress! Python 2 to 3 no longer seems to be the issue anymore. - I am now getting a different error message with missing library libelf.so.1
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -36,6 +37,7 @@ jobs:
           sudo apt install zlib1g:i386
           sudo apt install libsnappy-dev:i386
           sudo apt install liblz4-1:i386
+          sudo apt install libelf-dev:i386
           wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cibyl/cibyl-bin-linux32-21.tar.gz
           tar -zxvf cibyl-bin-linux32-21.tar.gz
           export PATH="$PATH:$HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin"
