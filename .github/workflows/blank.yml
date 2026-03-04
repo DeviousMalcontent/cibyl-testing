@@ -43,7 +43,6 @@ jobs:
         run: |
           pwd
           dir
-          cd cibyl-bin-linux32-21/mips-cibyl-elf/bin
-          cp /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/host-java/hello-world/main.c main.c
-          ./mips-cibyl-elf-gcc main.c
+          cd cibyl-bin-linux32-21/examples/host-java/hello-world
+          make
           dir
