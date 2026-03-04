@@ -41,4 +41,4 @@ jobs:
           cd cibyl-bin-linux32-21/mips-cibyl-elf/bin
           dir
           file mips-cibyl-elf-gcc
-          ./mips-cibyl-elf-gcc
+          ./mips-cibyl-elf-gcc.real --help
