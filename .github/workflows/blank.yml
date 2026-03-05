@@ -118,6 +118,17 @@ jobs:
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /libexec/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /mips-cibyl-elf/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
+          echo -- space --
+          dir
+          cd /
+          dir
+          echo -- space --
+
+          cd /mips-cibyl-elf/
+          dir
+          cd /home/runner/work/cibyl-testing/cibyl-testing/
+          dir
+          echo -- space --
           
           cd cibyl-bin-linux32-21/examples/host-java/hello-world/
           pwd
