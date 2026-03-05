@@ -113,11 +113,11 @@ jobs:
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/which.py
 
-          dir /usr/libexec
+          dir /usr/libexec/gcc
           echo -- space --
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/ /bin/          
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/lib/ /lib/
-          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /libexec/
+          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /usr/libexec/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /mips-cibyl-elf/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
           echo -- space --
