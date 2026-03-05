@@ -119,7 +119,7 @@ jobs:
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /bin/mips-cibyl-elf/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
 
-          /bin/cibyl-config -s
+          sudo /bin/cibyl-config -s
 
           cd /home/runner/work/cibyl-testing/cibyl-testing/
           cd cibyl-bin-linux32-21/examples/host-java/hello-world/
