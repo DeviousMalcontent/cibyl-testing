@@ -119,23 +119,23 @@ jobs:
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/lib/ /lib/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /usr/libexec/
           dir /lib/
-          echo -- space --
+          echo -- space /lib/ before --
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/lib/ /lib/
           dir /lib/
-          echo -- space --
+          echo -- space /lib/ after --
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/ /usr/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/ /usr/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/include /usr/include
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/share /usr/share
           dir /usr/include
-          echo -- space --
+          echo -- space /usr/include --
           dir /usr/share/java
-          echo -- space --
+          echo -- space /usr/share/java --
           sudo rsync -a --info=NAME /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /mips-cibyl-elf/
           sudo rsync -a --info=NAME /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
           
           cd /home/runner/work/cibyl-testing/cibyl-testing/
-          cd cibyl-bin-linux32-21/examples/hello-world/hello-world/
+          cd cibyl-bin-linux32-21/examples/host-java/hello-world/
           pwd
           dir
           cat Makefile
