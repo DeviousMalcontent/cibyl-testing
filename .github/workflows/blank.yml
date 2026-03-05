@@ -112,23 +112,9 @@ jobs:
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/which.py
 
-          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/ /bin/
-          if [ -e mips-cibyl-elf-gcc ]
-          then
-              echo "ok"
-          else
-              echo "nok"
-          fi
-          
-          if [ -e /bin/mips-cibyl-elf-gcc ]
-          then
-              echo "ok"
-          else
-              echo "nok"
-          fi
-          
+          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/ /bin/          
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/lib/ /lib/
-          ssudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /libexec/
+          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /libexec/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /mips-cibyl-elf/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
           
@@ -137,6 +123,20 @@ jobs:
           dir
           cat Makefile
           make
+
+#          if [ -e mips-cibyl-elf-gcc ]
+#          then
+#              echo "ok"
+#          else
+#              echo "nok"
+#          fi
+#          
+#          if [ -e /bin/mips-cibyl-elf-gcc ]
+#          then
+#              echo "ok"
+#          else
+#              echo "nok"
+#          fi
 
 #          cd cibyl-bin-linux32-21/examples/j2me/hello-world/
 #          pwd
