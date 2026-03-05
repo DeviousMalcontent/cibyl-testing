@@ -42,7 +42,6 @@ jobs:
           echo -- do move here --
           export PATH="$PATH:$HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin"
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc
-          chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-config
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-c-header
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-cibar
@@ -56,7 +55,7 @@ jobs:
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-as
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-c++
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-c++filt
-          chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-cc [mips-cibyl-elf-gcc]
+          chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-cc
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-cpp
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-ct-ng.config
           chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-g++
@@ -154,7 +153,7 @@ jobs:
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /bin/mips-cibyl-elf/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
 
-          sudo /bin/cibyl-config -s
+          python3 /bin/cibyl-config -s
 
           cd /home/runner/work/cibyl-testing/cibyl-testing/
           cd cibyl-bin-linux32-21/examples/host-java/hello-world/
