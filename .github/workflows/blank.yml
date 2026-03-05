@@ -41,25 +41,7 @@ jobs:
           wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cibyl/cibyl-bin-linux32-21.tar.gz
           tar -zxvf cibyl-bin-linux32-21.tar.gz
           echo -- do move here --
-          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/ /bin/
-          if [ -e mips-cibyl-elf-gcc ]
-          then
-              echo "ok"
-          else
-              echo "nok"
-          fi
-          
-          if [ -e /bin/mips-cibyl-elf-gcc ]
-          then
-              echo "ok"
-          else
-              echo "nok"
-          fi
-          
-          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/lib/ /lib/
-          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /libexec/
-          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /mips-cibyl-elf/
-          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
+          pwd
           echo done.
 
           
@@ -129,6 +111,26 @@ jobs:
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/config.py
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/which.py
+
+          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/ /bin/
+          if [ -e mips-cibyl-elf-gcc ]
+          then
+              echo "ok"
+          else
+              echo "nok"
+          fi
+          
+          if [ -e /bin/mips-cibyl-elf-gcc ]
+          then
+              echo "ok"
+          else
+              echo "nok"
+          fi
+          
+          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/lib/ /lib/
+          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /libexec/
+          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/ /mips-cibyl-elf/
+          sudo cp -a $HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
           
           cd cibyl-bin-linux32-21/examples/host-java/hello-world/
           pwd
