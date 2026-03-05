@@ -125,8 +125,10 @@ jobs:
           echo -- space /lib/ after --
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/ /usr/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/ /usr/
+          cat /usr/include/stdio.h
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/include /usr/include
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/mips-cibyl-elf/sys-root/usr/share /usr/share
+          cat /usr/include/stdio.h
           dir /usr/include
           echo -- space /usr/include --
           dir /usr/share/java
