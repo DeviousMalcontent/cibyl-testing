@@ -124,7 +124,7 @@ jobs:
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/share/ /share/
           
           cd /home/runner/work/cibyl-testing/cibyl-testing/
-          cd cibyl-bin-linux32-21/examples/host-java/hello-world/
+          cd cibyl-bin-linux32-21/examples/j2me/hello-world/
           pwd
           dir
           cat Makefile
