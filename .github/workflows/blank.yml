@@ -42,6 +42,7 @@ jobs:
           tar -zxvf cibyl-bin-linux32-21.tar.gz
           echo -- do move here --
           export PATH="$PATH:$HOME/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin"
+          chmod a+x /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/mips-cibyl-elf-gcc
           pwd
           echo done.
 
