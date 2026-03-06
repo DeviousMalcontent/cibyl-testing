@@ -165,9 +165,9 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
           cd /home/mips-cibyl-elf/bin
-          ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -Os -o tmpclasses
+          ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -Os -o program
           dir
-          ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME tmpclasses
+          ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
           
 #          ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME
 #          echo -- test --
