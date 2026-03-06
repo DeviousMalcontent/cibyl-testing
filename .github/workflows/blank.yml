@@ -163,7 +163,7 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
           cd /home/mips-cibyl-elf/bin
-          ./mips-cibyl-elf-gcc -Os -o main.c
+          ./mips-cibyl-elf-gcc -Os -o /home/examples/host-java/hello-world/main.c
           dir
           ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME cpp -C -P -DNOJ2ME /home/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/syscalls/java/imports
           echo -- test --
