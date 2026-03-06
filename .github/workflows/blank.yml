@@ -165,6 +165,7 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
           cd /home/mips-cibyl-elf/bin
+          ./xcibyl-translator
           ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -Os -o program
           dir
           madir tmpclasses
