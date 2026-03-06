@@ -165,11 +165,10 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
           cd /home/mips-cibyl-elf/bin
-          ./xcibyl-translator
           ./mips-cibyl-elf-gcc -Os -o program.jar /home/examples/host-java/hello-world/main.c
           dir
           ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
-          
+#          ./xcibyl-translator
 #          ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME
 #          echo -- test --
 #          dir
