@@ -153,28 +153,31 @@ jobs:
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /home/mips-cibyl-elf/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /home/examples/
           
-          echo -- cat before here --
-          cat /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
-          echo -- sed here --
           sed -i '19s#.*#FUNCTION_NAME="([A-Z,a-z,0-9,_,\\\\(,\\\\)]+)"#' /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
           sed -i '25s#.*#comment = re.compile("[ ,\\t]*;([A-Z,a-z,0-9,_,\\\\(,\\\\), ]+):")#' /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
           sed -i '45s#.*#instruction = re.compile("\\t([A-Z,a-z,0-9,_,\\\\(,\\\\), ]+)")#' /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
-          echo -- cat after here --
-          cat /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
-          
+
           cd /home/examples/host-java/hello-world/
           pwd
           dir
           echo -- test --
-          ./home/mips-cibyl-elf/bin/mips-cibyl-elf-gcc -Os -o main.c
+          cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
+          cd /home/mips-cibyl-elf/bin
+          ./mips-cibyl-elf-gcc -Os -o main.c
           dir
+          ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME cpp -C -P -DNOJ2ME /home/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/syscalls/java/imports
           echo -- test --
-          ./home/mips-cibyl-elf/bin/cibyl-mips2java -O -d tmpclasses -DNOJ2ME cpp -C -P -DNOJ2ME /home/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/syscalls/java/imports
+          cd /home/examples/host-java/hello-world/
           sed -i '6s#.*#	/home/mips-cibyl-elf/bin/mips-cibyl-elf-gcc -Os -o $@ $<#' Makefile
           sed -i '9s#.*#	/home/mips-cibyl-elf/bin/cibyl-mips2java -O -d tmpclasses -DNOJ2ME program#' Makefile
           cat Makefile
           make
-          
+
+#          echo -- cat after here --
+#          cat /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
+#          cho -- cat before here --
+#          cat /home/mips-cibyl-elf/bin/python/Cibyl/PeepholeOptimizer/parse.py
+#          echo -- sed here --
 #          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/ /bin/          
 #          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/lib/ /lib/
 #          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/libexec/ /usr/libexec/
