@@ -168,7 +168,7 @@ jobs:
           ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -Os -o tmpclasses
           cat tmpclasses
           dir
-          ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME tmpclasses/Cibyl.j
+          ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
           
 #          ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME
 #          echo -- test --
