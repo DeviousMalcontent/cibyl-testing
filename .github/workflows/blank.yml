@@ -166,9 +166,8 @@ jobs:
           cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
           cd /home/mips-cibyl-elf/bin
           ./xcibyl-translator
-          ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -Os -o program
+          ./mips-cibyl-elf-gcc -Os -o program.jar /home/examples/host-java/hello-world/main.c
           dir
-          madir tmpclasses
           ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
           
 #          ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME
