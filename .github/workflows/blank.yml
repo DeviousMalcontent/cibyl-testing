@@ -165,6 +165,11 @@ jobs:
           cd /home/examples/host-java/hello-world/
           pwd
           dir
+          echo -- test --
+          ./home/mips-cibyl-elf/bin/mips-cibyl-elf-gcc -Os -o main.c
+          dir
+          echo -- test --
+          ./home/mips-cibyl-elf/bin/cibyl-mips2java -O -d tmpclasses -DNOJ2ME cpp -C -P -DNOJ2ME /home/mips-cibyl-elf/bin/../mips-cibyl-elf/sys-root/usr/share/syscalls/java/imports
           sed -i '6s#.*#	/home/mips-cibyl-elf/bin/mips-cibyl-elf-gcc -Os -o $@ $<#' Makefile
           sed -i '9s#.*#	/home/mips-cibyl-elf/bin/cibyl-mips2java -O -d tmpclasses -DNOJ2ME program#' Makefile
           cat Makefile
