@@ -165,7 +165,8 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/mips-cibyl-elf/bin/main.c
           cd /home/mips-cibyl-elf/bin
-          ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -o tmpclasses
+          ./mips-cibyl-elf-gcc --help
+          ./mips-cibyl-elf-gcc /home/examples/host-java/hello-world/main.c -Os -o tmpclasses
           dir
           ./cibyl-mips2java --help
           
