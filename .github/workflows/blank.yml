@@ -98,12 +98,12 @@ jobs:
           2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java -W
           2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-peephole-optimize -W
 
-          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-c-header
-          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-cibar
-          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-java-wrappers
-          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-syscall-db
-          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java
-          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-peephole-optimize
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-c-header
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-cibar
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-java-wrappers
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-syscall-db
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java
+          reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-peephole-optimize
           
           2to3 --output-dir=cibyl-bin-linux32-21/mips-cibyl-elf/bin/python -W -n cibyl-bin-linux32-21/mips-cibyl-elf/bin/python
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/BinaryTranslation/Mips/__init__.py
