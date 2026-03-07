@@ -90,6 +90,21 @@ jobs:
         run: |
           2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-config -W
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-config
+          
+          2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-c-header -W
+          2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-cibar -W
+          2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-java-wrappers -W
+          2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-syscall-db -W
+          2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java -W
+          2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-peephole-optimize -W
+
+          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-c-header
+          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-cibar
+          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-java-wrappers
+          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-generate-syscall-db
+          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-mips2java
+          reindent -n 2to3 /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/cibyl-peephole-optimize
+          
           2to3 --output-dir=cibyl-bin-linux32-21/mips-cibyl-elf/bin/python -W -n cibyl-bin-linux32-21/mips-cibyl-elf/bin/python
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/BinaryTranslation/Mips/__init__.py
           reindent -n /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/BinaryTranslation/Mips/instruction.py
@@ -167,6 +182,7 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
           cd /home/cibyl/bin
+          ./cibyl-generate-syscall-db
           ./mips-cibyl-elf-gcc -Os -o program /home/examples/host-java/hello-world/main.c
           dir
           ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
