@@ -192,7 +192,7 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
           cd /home/cibyl/bin
-          ./cibyl-generate-syscall-db
+          ./cibyl-generate-c-header
           ./mips-cibyl-elf-gcc -Os -o program /home/examples/host-java/hello-world/main.c
           dir
           ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
