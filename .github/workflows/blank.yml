@@ -187,7 +187,7 @@ jobs:
           pwd
           dir
           echo -- cat --
-          cat /home/cibyl/bin/python/Cibyl/elf.py
+          cat /home/cibyl/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
           echo -- cat --     
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
