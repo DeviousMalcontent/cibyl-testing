@@ -173,6 +173,8 @@ jobs:
 
           sed -i '15s#.*#from Cibyl.BinaryTranslation.Mips.instruction import Instruction#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/BinaryTranslation/function.py
           sed -i '16s#.*#from Cibyl.BinaryTranslation.Mips import mips#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/BinaryTranslation/function.py
+
+          sed -i '13i#.*#sys.path.append('../')#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
           
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /home/cibyl/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /home/examples/
@@ -183,7 +185,7 @@ jobs:
           pwd
           dir
           echo -- cat --
-          cat /home/cibyl/bin/python/Cibyl/BinaryTranslation/function.py
+          cat /home/cibyl/bin/python/Cibyl/elf.py
           echo -- cat --     
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
