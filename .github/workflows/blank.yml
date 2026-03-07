@@ -175,7 +175,7 @@ jobs:
           sed -i '16s#.*#from Cibyl.BinaryTranslation.Mips import mips#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/BinaryTranslation/function.py
 
  
-          sed -i "13isys.path.append('../../')" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
+          sed -i "13isys.path.append('../')" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
           
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /home/cibyl/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /home/examples/
