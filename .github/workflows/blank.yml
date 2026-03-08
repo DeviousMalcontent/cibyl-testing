@@ -30,6 +30,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install dependencies
         run: |
+          find / -name java 
           sudo apt install 2to3
           pip install reindent
           pip install config
