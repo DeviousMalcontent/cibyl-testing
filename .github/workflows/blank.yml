@@ -209,11 +209,13 @@ jobs:
           echo -- test --
           cp /home/examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
           cd /home/cibyl/bin
-          ./cibyl-generate-c-header -o /home/cibyl/mips-cibyl-elf/sys-root/usr/include /home/cibyl/mips-cibyl-elf/sys-root/usr/share/syscalls set1
+          rm -f /home/cibyl/mips-cibyl-elf/sys-root/usr/include/cibyl-syscalls.db
           ./mips-cibyl-elf-gcc -Os -o program /home/examples/host-java/hello-world/main.c
           dir
           ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
 
+
+#         ./cibyl-generate-c-header -o /home/cibyl/mips-cibyl-elf/sys-root/usr/include /home/cibyl/mips-cibyl-elf/sys-root/usr/share/syscalls set1
 #          ./xcibyl-translator
 #          ./cibyl-mips2java -O -d tmpclasses -DNOJ2ME
 #          echo -- test --
