@@ -187,8 +187,10 @@ jobs:
           sed -i '305s#.*#        dir_str = data2.hex()#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
           sed -i '306s#.*#        of.write(dir_str)#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
 
-          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /home/cibyl/
-          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /home/examples/
+          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /cibyl/
+          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /examples/
+#          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /home/cibyl/
+#          sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /home/examples/
 
 #          sed -i '273s#.*#        of = open(self.outfile, "wb")#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
 #          sed -i "332s#.*#            of.write(item.decode() + '\\\0')#" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
@@ -200,19 +202,19 @@ jobs:
 #          sed -i "13isys.path.append('../')" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/elf.py
       - name: Build the application
         run: |
-          cd /home/examples/host-java/hello-world/
+          cd /examples/host-java/hello-world/
           pwd
           dir
           echo -- cat --
-          cat /home/cibyl/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
+          cat /cibyl/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
           echo -- cat --     
           echo -- test --
-          cp /home/examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
-          cd /home/cibyl/bin
+          cp /examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
+          cd /cibyl/bin
           echo -- cat2 -- 
-          cat /home/cibyl/bin/..//mips-cibyl-elf/sys-root/usr/share/syscalls//java/imports
+          cat /cibyl/bin/..//mips-cibyl-elf/sys-root/usr/share/syscalls//java/imports
           echo -- cat2 -- 
-          ./mips-cibyl-elf-gcc -Os -o program /home/examples/host-java/hello-world/main.c
+          ./mips-cibyl-elf-gcc -Os -o program /examples/host-java/hello-world/main.c
           dir
           ./cibyl-mips2java -O -d tmpclasses --define=NOJ2ME program
 
