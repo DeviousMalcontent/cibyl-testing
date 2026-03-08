@@ -209,7 +209,7 @@ jobs:
           cat /cibyl/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
           echo -- cat --     
           echo -- test --
-          cp /examples/host-java/hello-world/main.c /home/cibyl/bin/main.c
+          cp /examples/host-java/hello-world/main.c /cibyl/bin/main.c
           cd /cibyl/bin
           echo -- cat2 -- 
           cat /cibyl/bin/..//mips-cibyl-elf/sys-root/usr/share/syscalls//java/imports
