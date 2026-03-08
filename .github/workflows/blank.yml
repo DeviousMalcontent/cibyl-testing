@@ -179,8 +179,13 @@ jobs:
           sed -i '301s#.*#        data = struct.pack("P", 0x11b1c1d1)#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
           sed -i "302iblank" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
           sed -i '302s#.*#        hex_str = data.hex()#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
-          
           sed -i '303s#.*#        of.write(hex_str)#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
+
+          sed -i "304iblank" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
+          sed -i '304s#.*#        data2 = struct.pack("P", len(self.dirs))#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
+          sed -i "305iblank" /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
+          sed -i '305s#.*#        dir_str = data2.hex()#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
+          sed -i '306s#.*#        of.write(dir_str)#' /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/bin/python/Cibyl/SyscallHandling/syscallgenerator.py
 
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/mips-cibyl-elf/ /home/cibyl/
           sudo rsync -a /home/runner/work/cibyl-testing/cibyl-testing/cibyl-bin-linux32-21/examples/ /home/examples/
