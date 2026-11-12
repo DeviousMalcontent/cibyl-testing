@@ -41,4 +41,7 @@ jobs:
           pwd
           dir
           
+      - name: List Files
+        working-directory: ${{github.workspace}}
+        run: ls -R
 #          wget https://github.com/DeviousMalcontent/cibyl/releases/download/v7/mips-cibyl-elf.tar.bz2
